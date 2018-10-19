@@ -1,5 +1,6 @@
 package ie.ul.brianhyland.jerseylab;
 
+import android.content.ClipData;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -8,13 +9,30 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
+
+    private TextView mNameTextView, mNumberTextView;
+    private ImageView mJerseyImageView;
+    private Item mCurrentItem;
+    //private Item mCurrentItem;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mNameTextView = findViewById(R.id.name_text);
+        mNumberTextView = findViewById(R.id.number_text);
+        mJerseyImageView = findViewById(R.id.default_jersey);
+
+
+
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -22,10 +40,18 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                //add something later
+                mCurrentItem = JerseyItem.getDefaultItem();
+                showCurrentItem();
+
+
+
             }
         });
+    }
+
+    private void showCurrentItem() {
+
     }
 
     @Override
