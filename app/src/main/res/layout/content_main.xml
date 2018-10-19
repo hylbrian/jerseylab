@@ -37,7 +37,7 @@
         android:layout_alignLeft="@+id/default_jersey"
         android:layout_alignRight="@+id/default_jersey"
 
-        android:text="Android"
+        android:text="ANDROID"
         android:textSize="35sp"
         android:gravity="center"
          />
