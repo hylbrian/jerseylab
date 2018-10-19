@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mNameTextView, mNumberTextView;
     private ImageView mJerseyImageView;
     private Integer i;
+    private Item
     //private Item
     //private Item mCurrentItem;
 
