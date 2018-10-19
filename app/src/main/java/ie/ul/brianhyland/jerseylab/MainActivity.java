@@ -16,7 +16,8 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView mNameTextView, mNumberTextView;
     private ImageView mJerseyImageView;
-    private Item mCurrentItem;
+    private Integer i;
+    //private Item
     //private Item mCurrentItem;
 
 
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //add something later
-                mCurrentItem = JerseyItem.getDefaultItem();
+                //mCurrentItem = JerseyItem.getDefaultItem();
                 showCurrentItem();
 
 
