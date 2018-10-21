@@ -92,13 +92,24 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     number = Integer.parseInt(numberString);
                 }
-                Boolean colour = Boolean.FALSE;
+
+                ToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                        if (isChecked) {
+                            // The toggle is enabled
+                        } else {
+                            // The toggle is disabled
+                        }
+                    }
+                });
+
+                /*Boolean colour = Boolean.FALSE;
                 if(colour = Boolean.TRUE){
                     mJerseyImageView.setImageResource(R.drawable.green_jersey);
                 }else
                 {
                     mJerseyImageView.setImageResource(R.drawable.purple_jersey);
-                }
+                }*/
 
                 mCurrentItem = new JerseyItem(name, number, true);
                 showCurrentItem();}
@@ -117,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
     private void showCurrentItem() {
         mNameTextView.setText(mCurrentItem.getmName());
         mNumberTextView.setText(getString(R.string.number_format,mCurrentItem.getmNumber()));
-        mJerseyImageView.setImageResource(R.drawable.purple_jersey);
+        //mJerseyImageView.setImageResource(R.drawable.green_jersey);
         //mJerseyImageView.setI();
         //mJerseyImageView.setImageResource(mCurrentItem.ismColour());
 
