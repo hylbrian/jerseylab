@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 Boolean colour = Boolean.TRUE;
                 if(colour = Boolean.TRUE){
-                    mJerseyImageView.setImageResource(@d);
+                    mJerseyImageView.setImageResource(R.drawable);
                 }
 
                 mCurrentItem = new JerseyItem(name, number, true);
