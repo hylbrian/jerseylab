@@ -72,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 String name = nameEditText.getText().toString();
                 int number = Integer.parseInt(numberEditText.getText().toString());
+                
                 mCurrentItem = new JerseyItem(name, number, true);
                 showCurrentItem();
 
