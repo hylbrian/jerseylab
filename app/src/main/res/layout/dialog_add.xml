@@ -45,6 +45,7 @@
         android:textOff="@string/green"
         android:textOn="@string/purple"
         android:text=""
+        android:checked="true"
        />
 
 </LinearLayout>

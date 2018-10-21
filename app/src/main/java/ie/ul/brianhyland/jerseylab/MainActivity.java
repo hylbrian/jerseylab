@@ -76,8 +76,7 @@ public class MainActivity extends AppCompatActivity {
         final EditText numberEditText = view.findViewById(R.id.edit_number);
         final ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
 
-        toggleButtonJerseyColour.setOnClickListener(null);
-        setImag
+
 
         builder.setNegativeButton(android.R.string.cancel, null);
         builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
@@ -100,6 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
+
 
 
 
