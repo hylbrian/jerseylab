@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     number = Integer.parseInt(numberString);
                 }
-                
+                toggleButtonJerseyColour.setOnClickListener();
 
                 mCurrentItem = new JerseyItem(name, number, true);
                 showCurrentItem();}
