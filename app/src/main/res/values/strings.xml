@@ -2,4 +2,7 @@
     <string name="app_name">Jersey</string>
     <string name="action_settings">Settings</string>
     <string name="number_format">%d</string>
+    <string name="number_start">Number</string>
+    <string name="name_start">Name</string>
+    <string name="add_item">Update Jersey Info</string>
 </resources>
