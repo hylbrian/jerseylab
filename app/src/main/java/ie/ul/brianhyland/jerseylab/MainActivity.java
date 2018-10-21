@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         mNumberTextView = findViewById(R.id.number_text);
         mJerseyImageView = findViewById(R.id.default_jersey);
 
-        final ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
+        //ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
         //final ImageView lightImageView = (ImageView)findViewById(R.id.default_jersey);
 
 
@@ -74,9 +74,10 @@ public class MainActivity extends AppCompatActivity {
 
         final EditText nameEditText = view.findViewById(R.id.edit_name);
         final EditText numberEditText = view.findViewById(R.id.edit_number);
-        //numberEditText.setText("0");
+        final ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
 
-
+        toggleButtonJerseyColour.setOnClickListener(null);
+        setImag
 
         builder.setNegativeButton(android.R.string.cancel, null);
         builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
@@ -94,12 +95,13 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-
                 mCurrentItem = new JerseyItem(name, number, true);
                 showCurrentItem();}
 
 
         });
+
+
 
         builder.create().show();
     }
