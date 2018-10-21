@@ -117,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
     private void showCurrentItem() {
         mNameTextView.setText(mCurrentItem.getmName());
         mNumberTextView.setText(getString(R.string.number_format,mCurrentItem.getmNumber()));
+        mJerseyImageView.setImageResource(R.drawable.purple_jersey);
         //mJerseyImageView.setI();
         //mJerseyImageView.setImageResource(mCurrentItem.ismColour());
 
