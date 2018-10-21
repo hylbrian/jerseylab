@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //add something later
-                mCurrentItem = JerseyItem.getDefaultItem();
-                showCurrentItem();
+               
 
 
 
