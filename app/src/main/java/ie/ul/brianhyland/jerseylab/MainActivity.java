@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     number = Integer.parseInt(numberString);
                 }
-                Boolean colour = Boolean.TRUE;
+                Boolean colour = Boolean.FALSE;
                 if(colour = Boolean.TRUE){
                     mJerseyImageView.setImageResource(R.drawable.green_jersey);
                 }else
