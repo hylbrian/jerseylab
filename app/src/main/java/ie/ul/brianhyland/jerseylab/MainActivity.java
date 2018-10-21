@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 //int number = Integer.parseInt(numberEditText.getText().toString());
                 String numberString = numberEditText.getText().toString();
                 int number = 0;
-                if (numberString != null){
+                //if (numberString != null){
                     number = Integer.parseInt(numberString);
                 }else{
                      number += 0;
