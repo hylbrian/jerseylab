@@ -113,8 +113,9 @@ public class MainActivity extends AppCompatActivity {
 
         switch (item.getItemId()){
             case R.id.action_reset:
-                mCurrentItem = JerseyItem.getDefaultItem();
-                showCurrentItem();
+                //mCurrentItem = JerseyItem.getDefaultItem();
+                //showCurrentItem();
+                clearJersey();
                 return true;
 
             case R.id.action_settings:
@@ -126,5 +127,26 @@ public class MainActivity extends AppCompatActivity {
 
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void clearJersey() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("Reset");
+
+        builder.setMessage("Are you sure you want to reset all items?");
+
+        builder.setNegativeButton(android.R.string.cancel, null);
+        builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                mCurrentItem = JerseyItem.getDefaultItem();
+                showCurrentItem();
+
+            }
+        });
+
+        builder.create().show();
+
     }
 }
