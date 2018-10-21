@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         final EditText nameEditText = view.findViewById(R.id.edit_name);
         final EditText numberEditText = view.findViewById(R.id.edit_number);
+        //numberEditText.setText("0");
 
 
 
@@ -71,14 +72,21 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String name = nameEditText.getText().toString();
-                int number = Integer.parseInt(numberEditText.getText().toString());
-                if (number < 0){
-                    number = 0;
-                }
-                mCurrentItem = new JerseyItem(name, number, true);
-                showCurrentItem();
+                String numberString = numberEditText.getText().toString();
+                int number;
+                if(numberString != null){
 
-            }
+
+                number = Integer.parseInt(numberString+0);}
+
+                else{  number = 0;}
+                //if (number > 1000 || number < 0 ){
+                   // number = 0;
+                //}
+                mCurrentItem = new JerseyItem(name, number, true);
+                showCurrentItem();}
+
+
         });
 
         builder.create().show();
