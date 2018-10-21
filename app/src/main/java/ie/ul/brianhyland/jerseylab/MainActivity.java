@@ -82,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                //ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
                 String name = nameEditText.getText().toString();
                 //int number = Integer.parseInt(numberEditText.getText().toString());
                 String numberString = numberEditText.getText().toString();
@@ -92,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     number = Integer.parseInt(numberString);
                 }
-
+/*
                 ToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                         if (isChecked) {
@@ -102,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }
                 });
-
+*/
                 /*Boolean colour = Boolean.FALSE;
                 if(colour = Boolean.TRUE){
                     mJerseyImageView.setImageResource(R.drawable.green_jersey);
