@@ -93,8 +93,7 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     number = Integer.parseInt(numberString);
                 }
-
-                if(ToggleButton)
+                
 /*
 
                 ToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
