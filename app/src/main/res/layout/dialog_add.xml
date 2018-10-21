@@ -38,4 +38,13 @@
             android:inputType="number" />
     </LinearLayout>
 
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textOff="@string/green"
+        android:textOn="@string/purple"
+        android:text=""
+       />
+
 </LinearLayout>

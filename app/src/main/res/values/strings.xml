@@ -5,4 +5,6 @@
     <string name="number_start">Number</string>
     <string name="name_start">Name</string>
     <string name="add_item">Update Jersey Info</string>
+    <string name="purple">Purple</string>
+    <string name="green">Green</string>
 </resources>

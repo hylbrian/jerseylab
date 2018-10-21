@@ -3,6 +3,7 @@ package ie.ul.brianhyland.jerseylab;
 import android.content.ClipData;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
@@ -13,15 +14,21 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView mNameTextView, mNumberTextView;
     private ImageView mJerseyImageView;
     private JerseyItem mCurrentItem;
+    private final static String PREFS = "PREFS";
+    private static final String KEY_JERSEY_NAME = "KEY_JERSEY_NAME";
+
+
 
 
 
@@ -34,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
         mNumberTextView = findViewById(R.id.number_text);
         mJerseyImageView = findViewById(R.id.default_jersey);
 
+        final ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
+        //final ImageView lightImageView = (ImageView)findViewById(R.id.default_jersey);
 
 
 
@@ -52,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 
     private void addItem() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -83,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
+
                 mCurrentItem = new JerseyItem(name, number, true);
                 showCurrentItem();}
 
@@ -91,6 +103,8 @@ public class MainActivity extends AppCompatActivity {
 
         builder.create().show();
     }
+
+
 
     private void showCurrentItem() {
         mNameTextView.setText(mCurrentItem.getmName());
@@ -149,4 +163,7 @@ public class MainActivity extends AppCompatActivity {
         builder.create().show();
 
     }
+
+
+
 }
