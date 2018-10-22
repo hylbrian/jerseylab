@@ -215,6 +215,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        SharedPreferences prefs = getSharedPreferences(PREFS, MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(KEY_JERSEY_NAME, mJersey.getPlayerName());
+// Put the other fields into the editor
+        editor.commit();
+    }
 
 
 }
