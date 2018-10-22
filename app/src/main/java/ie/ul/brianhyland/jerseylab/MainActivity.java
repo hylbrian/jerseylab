@@ -136,9 +136,12 @@ public class MainActivity extends AppCompatActivity {
         builder.create().show();
     }
 
-    /*
+
     private void checkToggleButton() {
 
+ToggleButton.
+
+        /*
         ToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
@@ -152,9 +155,10 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             }
-        });
+        });*/
+
     }
-*/
+
 
     private void showCurrentItem() {
         mNameTextView.setText(mCurrentItem.getmName());
