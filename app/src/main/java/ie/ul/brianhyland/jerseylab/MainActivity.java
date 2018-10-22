@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     number = Integer.parseInt(numberString);
                 }
-            //checkToggleButton();
+            checkToggleButton();
 
 
 
@@ -139,7 +139,14 @@ public class MainActivity extends AppCompatActivity {
 
     private void checkToggleButton() {
 
-ToggleButton.
+        ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
+
+        toggleButtonJerseyColour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mJerseyImageView.setImageResource(R.drawable.purple_jersey);
+            }
+        });
 
         /*
         ToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
