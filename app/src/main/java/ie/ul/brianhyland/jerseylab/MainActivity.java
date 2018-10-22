@@ -4,6 +4,7 @@ import android.content.ClipData;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.support.design.widget.FloatingActionButton;
@@ -18,6 +19,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,9 +42,10 @@ public class MainActivity extends AppCompatActivity {
         mNameTextView = findViewById(R.id.name_text);
         mNumberTextView = findViewById(R.id.number_text);
         mJerseyImageView = findViewById(R.id.default_jersey);
+        ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
 
         //ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
-        //final ImageView lightImageView = (ImageView)findViewById(R.id.default_jersey);
+        final ImageView lightImageView = (ImageView)findViewById(R.id.default_jersey);
 
 
 
@@ -76,6 +79,22 @@ public class MainActivity extends AppCompatActivity {
         final EditText numberEditText = view.findViewById(R.id.edit_number);
         final ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
 
+        /*
+        toggleButtonJerseyColour.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    // if toggle button is enabled/on
+                    mJerseyImageView.setImageResource(R.drawable.green_jersey);
+
+                }
+                else{
+                    mJerseyImageView.setImageResource(R.drawable.purple_jersey);
+                }
+                showCurrentItem();}
+        });
+*/
+
 
 
         builder.setNegativeButton(android.R.string.cancel, null);
@@ -93,20 +112,10 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     number = Integer.parseInt(numberString);
                 }
+            //checkToggleButton();
 
-                
-/*
 
-                ToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-                    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                        if (isChecked) {
-                            // The toggle is enabled
-                        } else {
-                            // The toggle is disabled
-                        }
-                    }
-                });
-*/
+
                 /*Boolean colour = Boolean.FALSE;
                 if(colour = Boolean.TRUE){
                     mJerseyImageView.setImageResource(R.drawable.green_jersey);
@@ -127,7 +136,25 @@ public class MainActivity extends AppCompatActivity {
         builder.create().show();
     }
 
+    /*
+    private void checkToggleButton() {
 
+        ToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean checked) {
+                // Change both toggleButtonTurnLight and lightImageView's background image
+                // according to toggle button checked status.
+                if(checked)
+                {
+
+                }else
+                {
+
+                }
+            }
+        });
+    }
+*/
 
     private void showCurrentItem() {
         mNameTextView.setText(mCurrentItem.getmName());
