@@ -47,7 +47,12 @@ public class MainActivity extends AppCompatActivity {
         //ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
         final ImageView lightImageView = (ImageView)findViewById(R.id.default_jersey);
 
-
+        toggleButtonJerseyColour.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mJerseyImageView.setImageResource(R.drawable.purple_jersey);
+            }
+        });
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -112,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
                 }else{
                     number = Integer.parseInt(numberString);
                 }
-            checkToggleButton();
+            //checkToggleButton();
 
 
 
