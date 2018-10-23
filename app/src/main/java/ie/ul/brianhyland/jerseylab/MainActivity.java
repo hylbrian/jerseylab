@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
 
         //ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
-        final ImageView lightImageView = (ImageView)findViewById(R.id.default_jersey);
+        //final ImageView lightImageView = (ImageView)findViewById(R.id.default_jersey);
 
 
 
