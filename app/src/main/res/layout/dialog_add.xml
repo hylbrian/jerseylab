@@ -38,16 +38,22 @@
             android:inputType="number" />
     </LinearLayout>
 
-    
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <CheckBox android:id="@+id/green_jersey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green"
+            android:onClick="onCheckboxClicked"/>
+        <CheckBox android:id="@+id/purple_jersey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Purple"
+            android:onClick="onCheckboxClicked"/>
+    </LinearLayout>
 
-    <ToggleButton
-        android:id="@+id/toggleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textOff="@string/green"
-        android:textOn="@string/purple"
-        android:text=""
-        android:checked="true"
-       />
+
 
 </LinearLayout>

@@ -15,6 +15,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         mNameTextView = findViewById(R.id.name_text);
         mNumberTextView = findViewById(R.id.number_text);
         mJerseyImageView = findViewById(R.id.default_jersey);
-        ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
+        //ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
 
         //ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
         //final ImageView lightImageView = (ImageView)findViewById(R.id.default_jersey);
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
 
         final EditText nameEditText = view.findViewById(R.id.edit_name);
         final EditText numberEditText = view.findViewById(R.id.edit_number);
-        final ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
+        //final ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
 
         /*
         toggleButtonJerseyColour.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -137,16 +138,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void checkToggleButton() {
 
-        ToggleButton toggleButtonJerseyColour = (ToggleButton)findViewById(R.id.toggleButton);
-
-        toggleButtonJerseyColour.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                mJerseyImageView.setImageResource(R.drawable.purple_jersey);
-            }
-        });
 
         /*
         ToggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -164,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });*/
 
-    }
+    //}
 
 
     private void showCurrentItem() {
@@ -175,6 +167,29 @@ public class MainActivity extends AppCompatActivity {
         //mJerseyImageView.setImageResource(mCurrentItem.ismColour());
 
 
+    }
+
+    public void onCheckboxClicked(View view) {
+        // Is the view now checked?
+        boolean checked = ((CheckBox) view).isChecked();
+
+        // Check which checkbox was clicked
+        switch(view.getId()) {
+            case R.id.green_jersey:
+                if (checked){
+                    mJerseyImageView.setImageResource(R.drawable.green_jersey);
+                }
+
+                break;
+            case R.id.purple_jersey:
+                if (checked){
+                    mJerseyImageView.setImageResource(R.drawable.purple_jersey);
+                }
+
+
+                break;
+
+        }
     }
 
     @Override
@@ -215,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
         builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
+                mJerseyImageView.setImageResource(R.drawable.green_jersey);
                 mCurrentItem = JerseyItem.getDefaultItem();
                 showCurrentItem();
 
